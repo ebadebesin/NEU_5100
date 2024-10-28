@@ -8,14 +8,14 @@ public class lab1Part2 {
         // Initialize an ArrayList of names
         ArrayList<String> names = new ArrayList<>();
         names.add("Ebun");
-        names.add("Bolu");
+        names.add("Alexis");
         names.add("Tobi");
         names.add("David");
         names.add("Lara");
 
         // Create a new ArrayList to store modified names
         ArrayList<String> switchedNames = new ArrayList<>();
-
+        
         for (String name : names) {
             if (name.length() > 1) {
                 // Switch the first and last letters
@@ -37,3 +37,9 @@ public class lab1Part2 {
         System.out.println("Names (switched) = " + switchedNames);
     }
 }
+
+//////////////Sample output////////////
+/*
+ * Names = [Ebun, Alexis, Tobi, David, Lara]
+ * Names (switched) = [Nbue, Slexia, Iobt, David, Aarl]
+ */

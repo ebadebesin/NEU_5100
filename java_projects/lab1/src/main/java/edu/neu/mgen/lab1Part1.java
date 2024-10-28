@@ -23,3 +23,10 @@ public class lab1Part1
 
     }
 }
+
+//////////////Sample output////////////
+/*
+ * Array x = [2, 9, 5, 7, 3]
+ * Array y = [8, 1, 6, 4, 10]
+ * Array z = x + y = [8, 9, 6, 7, 10]
+ */

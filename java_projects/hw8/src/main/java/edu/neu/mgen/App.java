@@ -75,6 +75,38 @@ public class App
 // array: {“Anne”, “John”, “Alex”, “Jessica”}
 // array: {“Sun”, “Mercury”, “Venis”, “Earth”, “Mars”, “Jupiter”}
 
-// Comments:
-// Use loops to go through the arrays.
+/**
+    //////////////Sample Output///////////
 
+    Original array:
+    "Anne",
+    "John",
+    "Alex",
+    "Jessica",
+    End of the array
+
+    Resultant array:
+    "Acissej",
+    "Xela",
+    "Nhoj",
+    "Enna",
+    End of the array
+
+    Original array:
+    "Sun",
+    "Mercury",
+    "Venis",
+    "Earth",
+    "Mars",
+    "Jupiter",
+    End of the array
+
+    Resultant array:
+    "Retipuj",
+    "Sram",
+    "Htrae",
+    "Sinev",
+    "Yrucrem",
+    "Nus",
+    End of the array
+**/

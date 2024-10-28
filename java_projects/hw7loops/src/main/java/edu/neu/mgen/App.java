@@ -8,7 +8,11 @@ public class App
 {
     public static void main( String[] args )
     {
-        // System.out.println( "Hello World!" );
+                // Program
+                // You have two matrices A[][] = {{2,3,4},{3,4,5}} and B[][] = {{1,2},{3,4},{5,6}}
+                // First check if the matrices can be multiplied A*B.
+                // If yes, then use loops to calculate the product of these two matrices A*B
+                // Output the result.
 
         //define matrix A and B
         int[][] A = {{2,3,4},{3,4,5}};
@@ -28,7 +32,6 @@ public class App
             }
             System.out.println();
         }
-
         System.out.println("Matrix B:");
         for (int i = 0; i < rowsB; i++) {
             for (int j = 0; j < colsB; j++) {
@@ -41,7 +44,7 @@ public class App
         if (colsA != rowsB) {
             System.out.println("Matrices cannot be multiplied. The number of columns in A must be equal to the number of rows in B.");
         }
-        else{
+        else {
             //if yes loop to calculate A*B
             int[][] C = new int[rowsA][colsB];
             for (int i = 0; i < rowsA; i++) {
@@ -55,8 +58,7 @@ public class App
             System.out.println("The product of matrices A and B is:");
             for (int i = 0; i < rowsA; i++) {
                 for (int j = 0; j < colsB; j++) {
-                    // System.out.print(C[i][j] + " ");
-                    System.out.printf("%d ", C[i][j]);
+                    System.out.print(C[i][j] + " ");
                 }
                     System.out.println();
             }
@@ -66,12 +68,16 @@ public class App
     }
 }
 
-// Program
-// You have two matrices A[][] = {{2,3,4},{3,4,5}} and B[][] = {{1,2},{3,4},{5,6}}
-// First check if the matrices can be multiplied A*B.
-// If yes, then use loops to calculate the product of these two matrices A*B
-// Output the result.
-// Comments:
-// Learn first how to multiply matrices
-// Use loops to go through the matrices.
-// Your algorithm should be able to handle matrices of any size.
+
+///////////////////Sample Output///////////
+/**Matrix A:
+    2 3 4 
+    3 4 5 
+    Matrix B:
+    1 2 
+    3 4 
+    5 6 
+    The product of matrices A and B is:
+    31 40 
+    40 52 
+**/
