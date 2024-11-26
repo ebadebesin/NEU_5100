@@ -1,0 +1,54 @@
+Non-programming Assignment
+
+1) What does expression “try … catch” do?
+
+2) What does it mean when the program throws exceptions?
+
+3) What is a Thread in Java?
+
+ANSWER
+1) The expression “try … catch” is used to handle exceptions in Java. It is a
+block of code that is used to catch and handle exceptions that occur during the execution of the code
+within the try block.
+try block: This block encloses the code that might throw an exception.
+catch block: This block is executed if an exception occurs within the try block. 
+It allows you to handle the exception, log an error message, or take other corrective actions.
+
+Example:
+try {
+    int result = 10 / 0;
+} catch (ArithmeticException e) {
+    System.out.println("Error: Division by zero");   
+}
+
+2) The “throw” statement allows you to create a custom error. The “throw” statement is used together with an exception type.
+When the program throws exceptions, it means that an error has occurred and the program is unable
+to continue executing normally. The exception is thrown to indicate that something has gone wrong.
+The program will terminate or behave unexpectedly if it does not handle the exception.
+There are many exception types available in Java like:
+- ArithmeticException,
+- FileNotFoundException,
+- ArrayIndexOutOfBoundsException,
+- SecurityException, etc.
+
+
+3) A Thread in Java is a sequential flow  of execution within a program. 
+It allows you to perform multiple tasks concurrently, improving performance and responsiveness. 
+Threads are used to improve the responsiveness and efficiency of a program by allowing multiple tasks to be executed simultaneously.
+Key Concepts:
+You can create threads using the Thread class or by implementing the Runnable interface.
+The start() method initiates the thread's execution.
+A thread goes through various states, including New, Runnable, Running, Blocked, and Terminated.
+
+Example:
+public class Tester extends Thread{
+    public void run(){
+        System.out.println("Thread is running...");
+    }
+    public static void main(String args[]){
+        Tester t1 = new Tester();
+
+        // this will call run() method
+        t1.start();
+    }
+}

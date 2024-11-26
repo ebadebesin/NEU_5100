@@ -1,0 +1,55 @@
+Chapter 10 – Inheritance, Polymorphism, Inner Classes, Abstraction, and Interface
+
+Non-programming Assignment
+
+1) Can a class be derived (inherit) from two different independent classes?
+
+2) Can a class be derived (inherit) from a “final” class?
+
+3) What is polymorphism, how it works, and why is it needed?
+
+4) What is an inner (nested) class?
+
+5) What is an abstract class and why is it needed?
+
+6) What is an “interface” class in Java?
+
+ANSWER
+1) No, In Java, a class can be derived (inherit) from only one direct parent class.
+This ensures a clear hierarchical structure and prevents the complexities of multiple inheritance. 
+While a class can have multiple levels of inheritance, it can only have one immediate parent class.
+
+
+2) No, a class cannot be derived (inherit) from a “final” class.
+The final keyword in Java is used to declare a class as final, which means it cannot be subclassed. 
+This is often used to prevent unintended inheritance to a class's behavior and to ensure its integrity.
+
+
+3) Polymorphism is the ability of an object to take on multiple forms.
+This allows for more flexible and reusable code.
+Method Overriding: Subclasses can override methods inherited from their parent classes, providing specific implementations.
+Method Overloading: A class can have multiple methods with the same name but different parameter lists, allowing for different behaviors based on the input.
+
+
+4) An inner (nested) class is a class that is defined inside another class. 
+The purpose of nested classes is to group classes that belong together, which makes your code more readable and
+maintainable. They are also used to define classes that are only used within the context of the outer class.
+To access the inner class, create an object of the outer class, and then create an object of the inner class
+The inner class has access to the members of the outer class.
+
+
+5) An abstract class is a class that cannot be instantiated and is used to provide a    
+blueprint for other classes to follow. 
+They can contain both abstract methods (which must be implemented by subclasses) and concrete methods (which can be directly inherited). 
+It is needed because it allows us to define common attributes and methods that can be shared by multiple classes. 
+To achieve security - hide certain details and only show the important details of an object
+To achieve reusability - define common attributes and methods that can be shared by multiple classes
+
+
+6) An “interface” class in Java is used to define a contract that must be implemented by any class that implements it. 
+It is needed because it allows us to define a set of methods that must be implemented by any class that implements it, without having to worry about the implementation details.
+Interfaces are used to:
+Enable objects of different classes to be treated as if they were of the same type.
+Reduce dependencies between classes by defining a clear interface.
+Support inheritance: A class can implement multiple interfaces, allowing for more flexible inheritance hierarchies.
+

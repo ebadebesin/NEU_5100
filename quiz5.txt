@@ -1,0 +1,14 @@
+Questions:
+What is an abstract class?
+
+ANSWER
+An abstract class serves as a foundation and blueprint for other subclasses, it is designed to be extended and not instantiated directly. 
+It provides a shared structure and common functionality that multiple derived classes can inherit, which allows a clean and efficient way to organize code. 
+Abstract classes help encapsulate the essential characteristics relevant to the program’s operation, this helps with code reuse and consistency. 
+By defining a common interface for subclasses, abstract classes allow you to outline partial or incomplete implementations that other classes can build upon and customize. 
+
+Key things to note for Abstract Classes:
+
+Inheritance: Subclasses inherit the properties and methods of the abstract class.
+Code Reusability: Abstract classes promote code reusability by defining common behaviors and properties that can be shared across multiple subclasses.
+Polymorphism: Abstract classes enable polymorphism, allowing objects of different subclasses to be treated as objects of the abstract class.

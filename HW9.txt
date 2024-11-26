@@ -1,0 +1,84 @@
+Classes – OOD, OOP
+
+Non-programming Assignment
+
+1) What is class constructor and why is it needed?
+
+ANSWER
+A constructor in Java is a specialized method that automatically initializes a newly created object. 
+It’s called whenever an instance of a class is brought into existence. Its primary purpose is to assign initial values to the object’s attributes and perform any necessary setup tasks.
+
+Key points to remember:
+Constructors share the same name as the class they belong to and do not have a return type.
+If you don’t explicitly define a constructor, Java provides a default, no-argument constructor.
+In essence, constructors are the building blocks of object creation, ensuring that each new instance starts off on the right path.
+
+Example:
+public class Student {
+    private String name;
+
+    // Constructor
+    public Student(String name, int age) {
+        this.name = name;
+    }
+}
+
+
+2) What is the meaning of the following access modifiers: “public”, “private”, “protected”, and “default”?
+
+ANSWER
+Firstly, Access modifiers control the visibility and accessibility of classes, methods, and attributes within Java.
+Here’s a brief overview of each:
+public: The class, method, or variable is accessible from any other class in any package.
+private: The element is accessible only within the class it is defined in. Other classes cannot directly access private members.
+protected: The element is accessible within the same package and in subclasses, even if they are in different packages.
+default (no modifier): The element is accessible only within the same package. This is used when you don't specify a modifier. 
+
+Example:
+public class ExampleClass {
+    public int publicVar;      // Accessible anywhere
+    private int privateVar;    // Accessible only in this class
+    protected int protectedVar; // Accessible in the package and subclasses
+    int defaultVar;            // Accessible only in the package (default)
+}
+
+
+3) What is the meaning of the following non-access modifiers: “final” and “abstract”?
+
+ANSWER
+final: Used to prevent inheritance or modification.
+A final class cannot be subclassed.
+A final method cannot be overridden.
+A final variable cannot be reassigned once initialized.
+
+abstract: Used to define abstract classes and methods.
+An abstract class cannot be instantiated directly and is intended to be a base class for other classes.
+An abstract method has no body and must be implemented by subclasses.
+
+Example:
+public final class FinalClass { } // Cannot be extended
+
+public abstract class Shape {
+    public abstract void draw(); // Must be implemented by subclasses
+}
+
+
+4) What is a Java package?
+
+ANSWER
+A package in Java is a container that groups together related classes and interfaces. It is like a folder within a file system, organizing files for better management.
+Types of Packages:
+Built-in Packages: These are pre-defined packages provided by the Java API, offering a wide range of functionalities. 
+Examples include java.util for utility classes.
+User-defined Packages: Developers can create custom packages to structure their own code, promoting better organization and reusability.
+
+Some Key benefits of using packages:
+Conflict Avoidance: Packages prevent naming collisions between classes and interfaces, ensuring clarity and avoiding errors.
+Improved Maintainability: By organizing code into logical units, packages enhance code readability, making it easier to understand, modify, and maintain.
+
+Example:
+package com.example.project; // Defines the package
+
+public class MyClass { // Class within the package
+    // Class code here
+}

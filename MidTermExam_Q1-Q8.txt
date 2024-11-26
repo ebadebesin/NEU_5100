@@ -1,0 +1,187 @@
+Exam Questions:
+
+1. What is the difference between type and variable?
+ANSWER
+The main difference between type and variable is that Type is the description of a specific variable while variable are the names or data given to the type. 
+Some other differences are:
+- Types define the characteristics or description of the data, such as its size and allowed operations. Variables, on the other hand, are instances of these types and are used to store specific values.
+- For type, it does not allocate memory but variables allocates memory.
+- Types is basically the data type of a variable, (like char, boolean, integer, float, or string). Variables are the names given to memory locations that hold values (like int `myVar` = 23: myVar is the variable).
+- Variables are named storage locations in a computer program that hold data. Each variable has a type, which specifies the kind of data it can store 
+
+
+2. What is the role of archetypes in Java development environment?
+ANSWER
+Archetypes are a way to create a new project in a Java development environment by copying an existing template project. 
+They're predefined templates that provide a basic structure like the Project directory, files for configuration like the Maven archetype, basic code template or snippet like a "hello world" template.
+Essentially, They are like templates for a new java projects. 
+I believe we use archetypes for:
+- Faster project setup: Instead of starting from scratch, you can quickly generate a new project with the needed structure and configuration.
+- Consistent project structure: Archetypes also make sure that all your projects follow a similar structure, making it easier to navigate and understand.
+
+
+3. What is the difference between instance variable and local variable?
+ANSWER
+Instance variable is essentially like a global variable that can be accessed by any method within the class while local variable is a variable created inside your method that can not be accessed outside your method.
+Some important components to note about instance and local variables are,
+Instance variables are:
+- Shared by all instances of a class.
+- Can be accessed from any method within the class.
+- Can be changed from any method within the class.
+- Can be inherited by subclasses.
+- Can be accessed using the dot notation (e.g., `this.variable`)
+Local variables are:
+- Created inside a method or block.
+- Can only be accessed within the method or block where they are declared.
+- Can be changed within the method or block where they are declared.
+- Cannot be inherited by subclasses.
+In summary, instance variables are shared by all instances of a class and can be accessed from any method
+while local variables are created inside a method or block and can only be accessed within that method or block of code.
+
+
+4. What is the difference between Array and ArrayList?
+ANSWER
+Arrays are data structure used to store a fixed-size collection of elements of the same data type stored in a sequential manner and can be one dimensional or multi-dimensional.
+You can define Arrays like this: int[] arr = new int[5]; (Single-dimensional array)
+                                int[][] arr2 = new int[3][3]; (2D array (matrix) )
+
+ArrayList on the other hand is a resizable-array implementation of the List interface used to store a collection of elements like arrays, however, ArrayList is a dynamic array, meaning that it can grow or shrink as elements are added or removed. 
+You define ArrayList like this: ArrayList<Integer> list = new ArrayList<>();
+
+All in all, Arrays and ArrayLists are both data structures used to store collections of elements, but they have some key differences:
+Arrays:
+- Fixed size: Once an array is created, its size cannot be changed.
+- Elements can be accessed using an index (e.g., `array[0]`: this will be the element at index 0)
+- Arrays are generally faster and more memory-efficient than ArrayLists.
+ArrayLists:
+- Dynamic size: An ArrayList can grow or shrink as elements are added or removed.
+- Elements can be accessed using an index (e.g., `list.get(0)`: get the element at index 0)
+- ArrayLists are generally slower and more memory-intensive than arrays.
+
+
+5. How does “switch” statement work?
+ANSWER
+The switch statement is a flow that allows you to execute different conditions of code based on the value of a variable or expression. 
+It is used to perform different actions based on different conditions.
+There are some part in switch statements to note:
+- Expression Evaluation: The switch statement begins by evaluating an expression.
+- Each Case: The result of the expression is compared to the values in each case. If a match is found, the code belonging to that case is executed.
+- Execution and Break: Once the matching case is found, the code within that block is executed. To prevent the program from going through a redundant process to the next case, a break statement is usually used. This ensures that only the intended code is executed.
+- Default Case: If no match is found for any of the cases, the default case (if present) is executed. This is often used to handle unexpected values, error or to have a default statement.
+
+Here is a basic syntax of how the switch statement looks:
+
+int number = 2;
+
+switch (day) {
+    case 1:
+        System.out.println("1");
+        break;
+    case 2:
+        System.out.println("2");
+        break;
+    case 3:
+        System.out.println("3");   
+        break;
+    case 4:
+        System.out.println("4");
+        break;
+    default:
+        System.out.println("Invalid");
+        break;
+}
+
+
+6. What is the difference between “for” and “while” loops?
+ANSWER
+Both for and while loops are used to execute a block of code repeatedly, but they are differerent in how they control the loop.
+For loop:
+- Used to iterate over a collection of items (e.g., an array or a list).
+- The loop counter (i) is initialized before the loop starts.
+- The loop counter is incremented or decremented automatically after each iteration.
+- The loop continues until the counter reaches a specified value.
+- The loop can be used to iterate over a range of values.
+Example:
+for (int i = 0; i < 5; i++) {
+    System.out.println(i);
+}
+
+While loop:
+- Used to execute a block of code repeatedly while a condition is true.
+- The loop counter (i) is not initialized before the loop starts, instead outside the loop.
+- The loop counter is incremented or decremented manually after each iteration.
+- The loop continues until the condition becomes false.
+- The loop can be used to execute a block of code repeatedly until a certain condition is met
+Example:
+int i = 0;
+while (i < 5) {
+    System.out.println(i);
+    i++;
+}  
+
+In summary, the main difference between for and while loops is that for loops are used to iterate over
+a collection of items, while the while loops are used to execute a block of code repeatedly while a condition is true. 
+
+
+7. What is the output of the following fragment of code and why? Please explain in greater detail.
+                       int x = 5;
+
+                       if (x < 5){
+                          x++;
+                          x -= 1;
+                        }
+                      else
+                         x *= 3;
+
+                      if (x >= 5)
+
+                         x *= 2;
+
+                     System.out.println("x = " + x);
+ANSWER
+The output of the code is:
+x = 30
+
+Explanation:
+1. The variable x is initialized to 5.
+2. The if statement checks if x is less than 5. Since x is 5, this condition is false, so the code inside the if statement is skipped.
+3. The code inside the else block is executed. The expression x *= 3 is evaluated,
+which means x is multiplied by 3. So, x becomes 15.
+4. The if statement checks if x is greater than or equal to 5. Since x is 15, this condition is true, so the code inside this if statement is executed.
+5. The expression x *= 2 is evaluated, which means x is multiplied by 2.
+So, x becomes 30.
+6. Finally, the value of x is printed to the console.
+The output is x = 30, because the code inside the else block is executed when the condition x < 5 is false, and the code inside the second if
+statement is executed when the condition x >= 5 is true.
+
+
+8. What is the output of the following fragment of code and why? Please explain in greater detail.
+                      int x = 5;
+
+                      if (x < 5){
+                          x++;
+                          x -= 1;
+                        }
+                     if (x >= 5)
+
+                         x *= 2;
+
+                     System.out.println("x = " + x);
+
+ANSWER
+The output of the code is:
+x = 10
+
+Explanation:
+1. The variable x is initialized to 5.
+2. The if statement checks if x is less than 5. Since x is 5,
+this condition is false, so the code inside the if statement is skipped.
+3. The second if statement checks if x is greater than or equal to 5.
+Since x is 5, this condition is true, so the code inside this if statement is executed
+4. The expression x *= 2 is evaluated, which means x is multiplied by 2.
+So, x becomes 10.
+5. Finally, the value of x is printed to the console.
+The output is x = 10, because the code inside the if statement is executed when the condition
+x >= 5 is true, and the code x *= 2 is executed when the condition x >= 5 is true. 
+The code x++ and x -= 1 are not executed because the condition of the if statement is not met.
+

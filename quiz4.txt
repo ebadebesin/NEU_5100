@@ -1,0 +1,39 @@
+/ Run the following program and explain its behavior
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Main start");
+        TestClass testClass = new TestClass();
+        testClass.protectedMethod();
+        testClass.privateMethod(); // Why does this cause error?
+        System.out.println("Main end");
+    }
+}
+
+class TestClass{
+    private void privateMethod(){
+        System.out.println("private method run successfully!");
+    }
+
+    protected void protectedMethod(){
+        System.out.println("protected method run successully!");
+    }
+}
+
+ANSWER
+
+The program will get an error because the privateMethod() is not accessible from the main method.
+The privateMethod() is declared as private, which means it can only be accessed within the same class
+The main method is in a different class (Main), so it cannot access the privateMethod() of
+TestClass.
+To fix this, you can declare the privateMethod() as public or protected, or create a public
+method in TestClass that calls the privateMethod() and then call that public method from the
+main method.
+
+Here is the flow:
+The main method in Main class starts by printing "Main start".
+Then, it creates an instance of TestClass called testClass.
+Next, testClass.protectedMethod() is called. Since protectedMethod() has protected access, it is accessible within the same package, so this line executes successfully, printing "protected method run successfully!".
+The following line attempts to call testClass.privateMethod(), which is private in TestClass. This causes a compilation error because Main cannot access privateMethod().
+Error:
+The error is due to access control in Java. The private keyword restricts method access within the defining class, so privateMethod() cannot be accessed by the Main class.
