@@ -1,0 +1,285 @@
+Exam Questions:
+
+Essay Question 1 (max points 4). What specifics do the following class modifiers “public”, “private”, “protected”, and “static” imply? Explain and provide simple examples.
+ANSWER
+===============
+    Access modifiers control the visibility and accessibility of classes, methods, and attributes within Java.
+    Here’s a brief overview of each:
+    - public: The class is accessible from any other class in any package.
+    - private: The element is accessible only within the class it is defined in. Other classes cannot directly access private members.
+    - protected: The element is accessible within the same package and in subclasses, even if they are in different packages.
+        E.g.
+            public class ExampleClass {
+            public int publicVar;      // Accessible anywhere
+            private int privateVar;    // Accessible only in this class
+            protected int protectedVar; // Accessible in the package and subclasses
+            int defaultVar;            // Accessible only in the package (default)
+        }
+    - static: The class is instantiated only once and can be instantiated without creating an instance of the class. 
+    The member (variable or method) belongs to the class itself, rather than to individual instances of the class.
+        E.g.
+        class ExampleClass {
+            static int mystaticVar = 10;
+
+            public static void myStaticMethod() {
+                // rest of my code...
+            }
+        }
+            You can access staticVariable and staticMethod directly using the class name, without creating an instance of the class like MyClass.staticVariable
+
+
+
+Essay Question 2 (max points 4). Describe derived classes in Java, their properties and usage. Provide a simple example.
+ANSWER
+=================
+    Derived classes in Java are classes that inherit properties and behavior from a parent class. They are also known
+    as subclasses. The parent class is called the superclass. The derived class inherits all the fields and methods
+    of the superclass and can also add new fields and methods or override the ones inherited from the superclass.
+        Here’s a simple example of derived class:
+
+        // Superclass
+        class Animal {
+            void eat() {
+                System.out.println("This animal can eat.");
+            }
+        }
+
+        // Derived class
+        class Dog extends Animal {
+            void bark() {
+                System.out.println("The dog barks.");
+            }
+        }
+
+        In this example, the class Dog is a derived class that extends the class Animal. The class Dog
+        inherits the eat() method from the class Animal and also adds a new method bark().
+        You can create an instance of the class Dog and call the methods eat() and bark() like this
+        Dog myDog = new Dog();
+        myDog.eat();
+        myDog.bark();
+        The derived class can also override the methods of the superclass. For example, if the superclass Animal
+        has a method called sound() that prints "This animal makes a sound.", the derived class Dog can
+        override this method to print "The dog barks.".
+
+
+Essay Question 3 (max points 4). What is the role of abstract classes and why are they needed? Provide a simple example.
+ANSWER
+=================
+    An abstract class serves as a foundation and blueprint for other subclasses, it is designed to be extended and not instantiated directly. 
+    It provides a shared structure and common functionality that multiple derived classes can inherit, which allows a clean and efficient way to organize code. 
+    Abstract classes help encapsulate the essential characteristics relevant to the program’s operation, this helps with code reuse and consistency. 
+    An abstract class cannot be instantiated directly and is intended to be a base class for other classes.
+    By defining a common interface for subclasses, abstract classes allow you to give partial or incomplete implementations that other classes can build upon and customize. 
+
+    Key things to note for Abstract Classes:
+    Inheritance: Subclasses inherit the properties and methods of the abstract class.
+    Code Reusability: Abstract classes promote code reusability by defining common behaviors and properties that can be shared across multiple subclasses.
+    Polymorphism: Abstract classes enable polymorphism, allowing objects of different subclasses to be treated as objects of the abstract class.
+
+        Example:
+        public final class FinalClass { } // Cannot be extended
+
+        public abstract class Shape {
+            public abstract void draw(); // Must be implemented by other subclasses
+        }
+
+
+Essay Question 4 (max points 4). What does class modifier “final” do and why is it needed? Provide a simple example.
+ANSWER
+=================
+    The class modifier "final" is used to prevent a class from being subclassed or extended. 
+    Essentially, it is used to prevent inheritance or modification. Also a final method cannot be overridden and a final variable cannot be reassigned once initialized.
+    When a class is declared as final, it cannot be inherited by any other class. This is useful for creating immutable classes or when you want to ensure that the behavior of a class cannot be changed.
+
+        A simple example:
+
+        // Final class
+        final class FinalClass {
+            void display() {
+                System.out.println("This is a final class.");
+            }
+        }
+
+        // This class declaration would cause an error
+        // class SubClass extends FinalClass { } // Error: Cannot inherit from final 'FinalClass'
+
+        public class Main {
+            public static void main(String[] args) {
+                FinalClass finalObj = new FinalClass();
+                finalObj.display(); // Output: This is a final class.
+            }
+        }
+        In this example, FinalClass is declared as final, which means that no other class can extend it. 
+        If you try to create a subclass of FinalClass, it will result in a compilation error. 
+    The purpose of using the final modifier is to provide a way to prevent inheritance and ensure that the class's implementation remains unchanged.
+
+
+Essay Question 5 (max points 4). What is method overload, how does it work, and why is it needed? Provide a simple example.
+ANSWER
+=================
+    Method overloading in object-oriented programming, allows multiple methods with the same name to be defined, but with different parameters. 
+    A term polymorhism can be derived from that concept.
+    Polymorphism is the ability of an object to take on multiple forms. This allows for more flexible and reusable code.
+    How polymorphism works in Method Overloading: A class can have multiple methods with the same name but different parameter lists, allowing for different behaviors based on the input.
+
+    Why It Is Needed:
+    Improved Readability: It allows methods with similar functionality to share the same name, making the code easier to read and understand.
+    Flexibility: It provides the ability to handle different types of input without requiring different method names.
+    Convenience: It simplifies the interface of a class by allowing related operations to be performed through methods with the same name.
+
+        A simple example:
+
+        class MathOperations {
+            // Method to add two integers
+            int add(int a, int b) {
+                return a + b;
+            }
+
+            // Overloaded method to add three integers
+            int add(int a, int b, int c) {
+                return a + b + c;
+            }
+
+        }
+
+Essay Question 6 (max points 4). What is the difference between “while” and “do … while” loops? Provide simple examples.
+ANSWER
+=================
+    The main difference between while and do-while loops is the way the condition is handled
+    - While loop: The condition is handled and implemented before the body of the loop is executed. If the condition is false, the loop body is not executed at all.
+    - Do-while loop: The body of the loop is executed at least once, and then the condition is evaluated. 
+    If the condition is false, the loop ends after the first iteration.
+
+        Here are some simple examples:
+        public class WhileLoopExample {
+            public static void main(String[] args) {
+                int count = 1;
+
+                // While loop
+                while (count <= 5) {
+                    System.out.println("Count is: " + count);
+                    count++;
+                }
+            }
+        }
+
+        For the While loop, it checks the condition (count <= 5) before executing the loop body. 
+        It prints the value of count and increments it until the condition becomes false.
+
+        public class DoWhileLoopExample {
+            public static void main(String[] args) {
+                int count = 1;
+
+                // Do...while loop
+                do {
+                    System.out.println("Count is: " + count);
+                    count++;
+                } while (count <= 5);
+            }
+        }
+        For the Do-while loop, it executes the loop body first and then checks the condition.
+        It prints the value of count and increments it until the condition becomes false.
+
+
+
+Essay Question 7 (max points 4). What is SDLC, what are its main phases, and why is it needed? Provide simple examples.
+    ANSWER
+    =================
+    SDLC stands for Software Development Life Cycle, a structured process used to plan, design, develop, and test software. 
+    It ensures systematic and efficient software development. The main phases in SDLC include:
+
+    a. Planning: The organization’s total information system needs are identified, analyzed, prioritized, and organized.
+    b. Analysis: System requirements are studied, defined, and structured.
+    c. Design: The recommended solution is transformed into detailed specifications:
+        - Logical Design: Describes the system’s functional features independently of any technology or platform.
+        - Physical Design: Converts the logical specifications into technology-specific details needed for programming and system construction.
+    d. Implementation: The system is coded, tested, installed, and deployed within the organization.
+    e. Maintenance: The system is continuously repaired and improved to adapt to new requirements.
+    f. Obsolescence: When the system becomes outdated, it is replaced with a new generation system.
+
+    SDLC is needed because it ensures that the software development process is systematic, efficient, and effective.
+    It helps to:
+    - Ensure that the software meets the requirements of the users
+    - Improve the scalability of the software
+    - Improve the communication among team members
+    - Improve the maintainability of the software
+    - Improve the reliability of the software
+    - Reduce the risk of project failure
+
+        A simple example:
+        Suppose a company wants to develop a mobile app for ordering food online.
+        SDLC phases:
+        - Planning: Identify the company’s needs, analyze the market, and prioritize the features.
+        - Analysis: Study the system requirements, define the features, and structure the system.
+        - Design: Transform the logical specifications into technology-specific details.
+        - Implementation: Code the app, test it, and deploy it.
+        - Maintenance: Continuously repair and improve the app to adapt to new requirements.
+        - Obsolescence: Replace the app with a new generation system when it becomes outdated.
+
+
+Interpretation Question 8 (max points 4). Why does the indicated line of code cause an error?
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        System.out.println("Main start");
+
+        TestClass testClass = new TestClass();
+
+        testClass.protectedMethod();
+
+        testClass.privateMethod(); // Why does this line cause an error?
+
+        System.out.println("Main end");
+    }
+}
+
+class TestClass{
+
+    private void privateMethod(){
+
+        System.out.println("private method run successfully!");
+    }
+
+    protected void protectedMethod(){
+
+        System.out.println("protected method run successully!");
+
+    }
+}
+
+ANSWER
+==================
+The line of code that causes an error is `testClass.privateMethod();`.
+
+The program will get an error because the privateMethod() is not accessible from the main method.
+The privateMethod() is declared as private, which means it can only be accessed within the same class
+The main method is in a different class (Main), so it cannot access the privateMethod() of TestClass.
+----------------------------
+Here is the flow:
+The main method in Main class starts by printing "Main start".
+Then, it creates an instance of TestClass called testClass.
+Next, testClass.protectedMethod() is called. Since protectedMethod() has protected access, it is accessible within the same package, so this line executes successfully, printing "protected method run successfully!".
+The next line tries to call testClass.privateMethod(), which is "private" in TestClass. This causes a compilation error because Main cannot access privateMethod().
+Error:
+The error is due to access control in Java. The private keyword restricts method access within the defining class, so privateMethod() cannot be accessed by the Main class.
+-------------------------------
+To fix this, you can declare the privateMethod() as public or protected, or create a public
+method in TestClass that calls the privateMethod() and then call that public method from the
+main method.
+
+
+9. Programming Assignment 1 (max points 8):
+Open the Notepad application on your computer and write a plain text “Initial string” in the Notepad. Save the Notepad on the desktop of your computer under filename “myFile.txt”.
+Make a screenshot of the text in the Notepad. Close the Notepad.
+Develop a program that opens and reads file “myFile.txt”. Use “try … catch” construction in this program.
+Print this text from “myFile.txt” in the Visual Studio Code terminal.
+Make a screenshot of the printed text in the Visual Code terminal.
+Write an additional new text “A new string” to file “myFile.txt” from your program. Thus, the file has two strings, the initial one, and the new one.
+Open file “myFile.txt” with Notepad to see its content. It should have two strings, the initial string and the added later new string.
+Make a screenshot of the text in the Notepad. Close the Notepad.
+Submit four files including the actual source code file with the program, two screenshots of the Notepad content (before and after), and one screenshot of the Visual Studio Code terminal output.
+ANSWER
+================
+In seperate code doc

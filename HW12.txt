@@ -36,3 +36,45 @@ You can write information to a file using the following method:
 
 Always use try-catch blocks to handle potential errors like FileNotFoundException and IOException.
 
+
+
+Questions:
+How to create a file and write to it?
+============================
+You can create a file and write to it using the following methods:
+1: Using FileWriter
+    Create a file that you want to write into
+    Create a FileWriter object specifying the file path and mode.
+    Use a while loop to check if there's a next line and read it using nextLine().
+    Create a Scanner object to read the file line by line.
+    Use the write() method to write characters to the file.
+    Close the FileWriter to save the changes.
+    Close the scanner 
+Use try-catch blocks to handle potential errors like FileNotFoundException and IOException.
+
+Example:
+    try {
+        // Read from the file
+        FileReader fileReader = new FileReader("test_file.txt");
+        String line;
+            while ((line = fileReader.readLine()) != null) {
+                System.out.println(line);
+
+            }
+            fileReader.close(); 
+             // Write to the file
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Enter text to write to the file: ");
+            String phrase = scanner.nextLine();
+
+            FileWriter fileWriter = new FileWriter("test_file.txt", true); // Append mode is true
+            fileWriter.newLine();
+            fileWriter.write(phrase);
+            fileWriter.close();
+            scanner.close();
+
+            System.out.println("Text written successfully.");
+        } catch (IOException e) {
+            System.out.println("An error occurred: " + e.getMessage());
+        }
+    }

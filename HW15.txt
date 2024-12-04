@@ -1,0 +1,40 @@
+Non-programming Assignment
+
+1) What is SDLC and what are its steps?
+
+2) List and describe different SDLC types.
+
+ANSWER
+=====================================================
+1.) What is SDLC?
+    SDLC stands for Software Development Life Cycle, a structured process used to plan, design, develop, and test software. 
+    It ensures systematic and efficient software development. The steps in SDLC include:
+
+    a. Planning: The organization’s total information system needs are identified, analyzed, prioritized, and organized.
+    b. Analysis: System requirements are studied, defined, and structured.
+    c. Design: The recommended solution is transformed into detailed specifications:
+        - Logical Design: Describes the system’s functional features independently of any technology or platform.
+        - Physical Design: Converts the logical specifications into technology-specific details needed for programming and system construction.
+    d. Implementation: The system is coded, tested, installed, and deployed within the organization.
+    e. Maintenance: The system is continuously repaired and improved to adapt to new requirements.
+    f. Obsolescence: When the system becomes outdated, it is replaced with a new generation system.
+
+
+2.) What are the Types of SDLC Models?
+    Different SDLC models provide various approaches to software development:
+
+    a. Waterfall Model: A linear, sequential approach where each phase must be completed before moving to the next.
+    Simple and easy to understand but lacks flexibility, as changes cannot be made mid-project.
+    b. Agile Model: An iterative and incremental approach that emphasizes flexibility and customer collaboration.
+    Allows for mid-project changes and promotes continuous feedback throughout development.
+    c. Rapid Application Development (RAD): Focuses on quick development using prototypes and iterative feedback.
+    Prioritizes user involvement and rapid delivery of functional software.
+    d. Service-Oriented Architecture (SOA) is a modular design approach where reusable services interact through standard protocols such as REST or SOAP. 
+    This architecture promotes scalability, reusability, and seamless integration across systems, making it ideal for complex and distributed applications. 
+    
+    - eXtreme Programming (XP): A type of Agile method emphasizing frequent releases in short development cycles.
+    Promotes high customer satisfaction through constant collaboration and adaptation.
+     
+    - CASE Tools: Computer-Aided Software Engineering tools support the development process by automating tasks like design and testing.
+   
+    By selecting the appropriate SDLC model, teams can align their development process with project requirements and constraints.

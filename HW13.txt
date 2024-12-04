@@ -1,0 +1,44 @@
+Non-programming Assignment
+
+1) What is JDBC?
+2) How to connect your Java program to a database?
+
+ANSWER
+------------------
+
+1) JDBC stands for Java Database Connectivity. It is a Java API that allows Java programs to interact
+with relational databases. JDBC provides a standard way for Java programs to access and manipulate
+data in a database.
+
+There are four types of JDBC driver:
+JDBC-ODBC Bridge driver
+Native driver
+Network Protocol Driver
+Thin driver
+
+================================
+
+2) To connect your Java program to a database, you need to follow these steps:
+- Load the JDBC driver for the database you are using (e.g. MySQL, Oracle,
+PostgreSQL, etc.)
+
+- Create a connection to the database using the JDBC driver
+- Execute SQL queries to perform operations on the database
+- Close the connection when you are done
+
+- When a Java application needs a database connection, one of the
+DriverManager.getConnection() methods is used to create a JDBC
+Connection.
+- The URL used is dependent upon the particular database and JDBC
+driver. It will always begin with the "jdbc:" protocol, but the rest is up
+to the particular vendor.
+
+Here is an example of how to connect to a database
+import java.sql.*;
+class dbConn {
+    public static void main(String args[]) {
+        try (Connection conn = DriverManager.getConnection(dbURL, dbname, password)) {
+                /* you use the connection here */
+        } 
+    }
+}

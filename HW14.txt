@@ -1,0 +1,44 @@
+Non-programming Assignment
+
+1) How can we add GUI to a Java program?
+
+2) What is AWT - Abstract Windowing Toolkit?
+
+3) What is Swing?
+
+ANSWER
+=====================================================
+1.)
+To add a Graphical User Interface (GUI) to a Java program, developers use libraries such as Swing or AWT (Abstract Windowing Toolkit). 
+These libraries provide prebuilt classes and components like buttons, text fields, labels, and more, to create interactive interfaces. 
+Developers can use these tools to design windows, menus, and dialogs. The GUI is event-driven, meaning user actions like clicks and inputs trigger specific responses in the program.
+
+Example:
+
+import javax.swing.*;
+public class Sample {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Simple GUI"); // Create a frame
+        JButton button = new JButton("Click Me"); // Add a button
+        frame.add(button); // Add the button to the frame
+        frame.setSize(300, 200); // Set frame size
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Close on exit
+        frame.setVisible(true); // Make the frame visible
+    }
+}
+
+
+2.) 
+AWT is Java's original toolkit for building graphical user interfaces (GUIs). 
+It provides basic components like windows, buttons, text fields, and menus. 
+AWT components are heavyweight, meaning they rely on the native GUI of the operating system to render components, which can cause inconsistencies in appearance across platforms. 
+AWT doesn't follows MVC(Model View Controller) where model represents data, view represents presentation and controller acts as an interface between model and view.
+AWT is considered less flexible compared to modern GUI libraries like Swing. The Swing classes are built on top of the AWT architecture
+
+
+3.)
+Swing is a lightweight GUI toolkit built on top of AWT. 
+Unlike AWT, Swing components are platform-independent, ensuring a consistent appearance across different operating systems. 
+Swing provides advanced components such as tables, lists, scrollpanes, colorchooser, tabbedpane etc., which are not available in AWT. 
+It also supports a pluggable look and feel, allowing developers to customize the interface's appearance. Swing components are part of the javax.swing package.
+Swing is more flexible and powerful than AWT, making it the preferred choice for building complex GUI.
